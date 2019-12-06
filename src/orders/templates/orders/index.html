@@ -1,0 +1,43 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block head_title %}jQuery AJAX Tutorial{% endblock head_title %}
+
+{% block custom_css %}
+  <link rel="stylesheet" href="{% static '/orders/css/styles.css' %}"/>
+{% endblock custom_css %}
+
+{% block content %}
+  <div class="container" id="page-title">
+    <h1>jQuery AJAX Tutorial</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="text-muted">Coffee Orders:</h2>
+      <ul id="orders"></ul>
+    </div>
+
+    <div class="col-md-4">
+      <h2 class="text-muted">Add New Coffee Order:</h2>
+      <form action="">
+        {% csrf_token %}
+        <label for"name">Name:</label>
+        <input type="text" id="name">
+        <div class="row">
+          <div class="col-md-auto">
+            <label for"drink" class="mr-1">Drink:</label>
+            <input type="text" id="drink">
+          </div>
+        </div>
+      </form>
+      <button type="button" class="btn btn-outline-info" id="add-order">Add!</button>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block button_url %}https://github.com/jzarnstorff/Django/tree/master/my_projects/src/orders{% endblock button_url %}
+
+{% block javascript %}
+  <script src="{% static '/orders/js/main.js' %}"></script>
+{% endblock javascript %}

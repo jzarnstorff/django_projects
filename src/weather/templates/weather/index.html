@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block head_title %}Weather App{% endblock head_title %}
+
+{% block custom_css %}
+  <link rel="stylesheet" href="{% static '/weather/css/styles.css' %}"/>
+{% endblock custom_css %}
+
+{% block content %}
+  <div class="green-container">
+    <div class="container" id="page-title">
+      <h1>What's the weather like?</h1>
+    </div>
+  </div>
+
+  <section class="form-container">
+    <div class="row justify-content-md-center">
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.name  }} 
+        <button type="submit" class="btn btn-primary">Add City</button>
+      </form>
+    </div>
+  </section>
+{% endblock content %}
+
+{% block button_url %}https://github.com/jzarnstorff/Django/tree/master/my_projects/src/weather{% endblock button_url %}

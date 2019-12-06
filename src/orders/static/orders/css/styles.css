@@ -1,0 +1,15 @@
+div#page-title {
+    text-align: center;
+    margin-top: 80px;
+}
+
+ul#orders li{
+    list-style-type: none;
+    background-color: #F2F2F2;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+ul#orders li:hover{
+    background-color: #E2E2E2;
+}

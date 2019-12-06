@@ -1,0 +1,15 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block head_title %}Home{% endblock head_title %}
+
+{% block custom_css %}
+  <link rel="stylesheet" href="{% static '/home/css/styles.css' %}"/>
+{% endblock custom_css %}
+
+{% block content %}
+  <div class="container" id="page-title">
+    <h1>Index Page</h1>
+  </div>
+{% endblock content %}
+
